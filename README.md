@@ -1,8 +1,10 @@
 # Simple Tic-Tac-Toe Game with Java Swing, Login, and Statistics
 
 ## Student Information
-Name: Nalanda Mahabarata
-Student ID: 5026251004
+Name: Nalanda Mahabarata 
+
+Student ID: 5026251004 
+
 Class: Q
 
 ## Project Description
@@ -28,14 +30,23 @@ Database used: (Microsoft) SQL Server / mssql
    
 ## Class Explanation
 Main:
+
 DatabaseManager:
+
 Player:
+
 PlayerService:
+
 GameLogic:
+
 LoginFrame:
+
 MainMenuFrame:
+
 GameFrame:
+
 StatisticsFrame:
+
 TopScorersFrame:
 
 ## Screenshots
