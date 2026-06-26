@@ -49,17 +49,43 @@ public class GameLogic {
     }
 
     public int computerMove() {
-        ArrayList<Integer> emptySpots = new ArrayList<>();
+    Random random = new Random();
+    if (random.nextBoolean()) {
         for (int i = 0; i < board.length; i++) {
-            if (board[i] == ' ') emptySpots.add(i);
+            if (board[i] == ' ') {
+                board[i] = 'O';
+                if (checkWinner('O')) {
+                    return i;
+                }
+                board[i] = ' ';
+            }
         }
-        
-        if (emptySpots.isEmpty()) return -1;
-        
-        Random rand = new Random();
-        int randomSpot = emptySpots.get(rand.nextInt(emptySpots.size()));
-        board[randomSpot] = 'O';
-        return randomSpot;
+
+        for (int i = 0; i < board.length; i++) {
+            if (board[i] == ' ') {
+                board[i] = 'X';
+                if (checkWinner('X')) {
+                    board[i] = 'O';
+                    return i;
+                }
+                board[i] = ' ';
+            }
+        }
+    }
+    ArrayList<Integer> emptySpots = new ArrayList<>();
+    for (int i = 0; i < board.length; i++) {
+        if (board[i] == ' ') {
+            emptySpots.add(i);
+        }
+    }
+
+    if (emptySpots.isEmpty()) {
+        return -1;
+    }
+
+    int move = emptySpots.get(random.nextInt(emptySpots.size()));
+    board[move] = 'O';
+    return move;
     }
 
     public char[] getBoard() {
