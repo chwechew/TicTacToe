@@ -1,4 +1,4 @@
-# Simple Tic-Tac-Toe Game with Java Swing, Login, and Statistics
+# Simple Tic-Tac-Toe Game
 
 ## Student Information
 Name: Nalanda Mahabarata 
